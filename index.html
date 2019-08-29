@@ -1,11 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <title>Exercise 3</title>
-</head>
-<body>
-    <center>
-        <h1>Daftar Planet</h1>
-    </center>
-</body>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script src="planet.js"></script>
+    <style>
+        .padding{
+            padding: 30px;
+        }
+    </style>
+  </head>
+  <body>
+    <thead class="container-fluid">
+        <div class="row">
+            <div class="col-12 text-center btn btn-warning padding">
+                <h2 style="color: cornsilk">-SWAPI-</h2>
+            </div>
+        </div>
+        <row class="row padding">
+            <div class="col-md-4"></div>
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <button class="btn btn-outline-secondary" type="button" id="button-addon1">Cari</button>
+                    </div>
+                    <input type="text" id="filter" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                </div>
+            </div>
+        </row>        
+ 
+      <table class="table table-hover padding">
+        <thead>
+          <tr>
+            <th scope="col">No.</th>
+            <th scope="col">Nama</th>
+            <th scope="col">Rotation Periode</th>
+            <th scope="col">Diameter</th>
+            <th scope="col">Climate</th>
+            <th scope="col">Gravity</th>
+            <th scope="col">Terrain</th>
+            <th scope="col">Surface Water</th>
+            <th scope="col">population</th>
+          </tr>
+        </thead>
+        <tbody id="tBody"></tbody>
+      </table>
+    </thead>
+  </body>
 </html>
