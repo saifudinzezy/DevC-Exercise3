@@ -14,21 +14,20 @@ fetch('https://swapi.co/api/planets/',{
 
 //filter
 function filter() {
-  var q = document.getElementById("filter").nodeValue;
+  var q = document.getElementById('filter').nodeValue;
   data = planets.filter(function(planet) {
     return (
-          planet.name.toLowerCase().includes(q) 
-          || planet.rotation_period.toLowerCase().includes(q)
-          || planet.orbital_period.toLowerCase().includes(q)
-          || planet.diameter.toLowerCase().includes(q)
-          || planet.climate.toLowerCase().includes(q)
-          || planet.gravity.toLowerCase().includes(q)
-          || planet.terrain.toLowerCase().includes(q)
-          || planet.surface_water.toLowerCase().includes(q)
-          || planet.population.toLowerCase().includes(q)
+      planet.name.toLowerCase().includes(q)
+      || planet.rotation_period.toLowerCase().includes(q)
+      // || planet.orbital_period.toLowerCase().includes(q)
+      || planet.diameter.toLowerCase().includes(q)
+      || planet.climate.toLowerCase().includes(q)
+      || planet.gravity.toLowerCase().includes(q)
+      || planet.terrain.toLowerCase().includes(q)
+      || planet.surface_water.toLowerCase().includes(q)
+      || planet.population.toLowerCase().includes(q)
     );
   });
-  // console.log(data);
   f_showData(data);
 }
 
